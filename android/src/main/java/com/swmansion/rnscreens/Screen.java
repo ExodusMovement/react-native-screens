@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.facebook.react.uimanager.PointerEvents;
 import com.facebook.react.uimanager.ReactPointerEventsView;
+import java.lang.reflect.Field;
 
 public class Screen extends ViewGroup implements ReactPointerEventsView {
 
@@ -85,7 +86,24 @@ public class Screen extends ViewGroup implements ReactPointerEventsView {
   }
 
   protected void setContainer(@Nullable ScreenContainer mContainer) {
+    // source:
+    // explanation:
+    //   https://github.com/kmagiera/react-native-screens/issues/54#issuecomment-475091756
+    //   https://github.com/kmagiera/react-native-screens/issues/54#issuecomment-475355506
+    // code:
+    //   https://github.com/TikiTDO/react-native-screens/commit/5e490b22c1e04b558816437f9fd2aa723e393fe6
     this.mContainer = mContainer;
+    if (mContainer == null) {
+      try {
+        Field f = mFragment.getClass().getSuperclass().getDeclaredField("mContainerId");
+        f.setAccessible(true);
+        f.set(this.mFragment, 0);
+      } catch(NoSuchFieldException e) {
+        // Eat the error, nom nom
+      } catch(IllegalAccessException e) {
+        // This one too. It is delicious.
+      }
+    }
   }
 
   protected @Nullable ScreenContainer getContainer() {
