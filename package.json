@@ -1,5 +1,5 @@
 {
-  "name": "react-native-screens",
+  "name": "@exodus/react-native-screens",
   "version": "1.0.0-alpha.22",
   "description": "First incomplete navigation solution for your react-native app.",
   "scripts": {
