@@ -3,6 +3,8 @@ package com.swmansion.rnscreens;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Paint;
+import android.os.Parcelable;
+import android.util.SparseArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -64,6 +66,18 @@ public class Screen extends ViewGroup implements ReactPointerEventsView {
     }
     mTransitioning = transitioning;
     super.setLayerType(transitioning ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE, null);
+  }
+
+  @Override
+  protected void dispatchSaveInstanceState(SparseArray<Parcelable> container) {
+    // do nothing, react native will keep the view hierarchy so no need to serialize/deserialize
+    // view's states. The side effect of restoring is that TextInput components would trigger set-text
+    // events which may confuse text input handling.
+  }
+
+  @Override
+  protected void dispatchRestoreInstanceState(SparseArray<Parcelable> container) {
+    // ignore restoring instance state too as we are not saving anything anyways.
   }
 
   @Override
