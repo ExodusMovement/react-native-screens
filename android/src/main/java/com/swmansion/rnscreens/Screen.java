@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+
 import com.facebook.react.uimanager.PointerEvents;
 import com.facebook.react.uimanager.ReactPointerEventsView;
 import java.lang.reflect.Field;
@@ -65,7 +67,25 @@ public class Screen extends ViewGroup implements ReactPointerEventsView {
       return;
     }
     mTransitioning = transitioning;
-    super.setLayerType(transitioning ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE, null);
+    boolean isWebViewInScreen = hasWebView(this);
+    if (isWebViewInScreen && getLayerType() != View.LAYER_TYPE_HARDWARE) {
+      return;
+    }
+    super.setLayerType(transitioning && !isWebViewInScreen ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE, null);
+  }
+
+  private boolean hasWebView(ViewGroup viewGroup) {
+    for(int i = 0; i < viewGroup.getChildCount(); i++) {
+      View child = viewGroup.getChildAt(i);
+      if (child instanceof WebView) {
+        return true;
+      } else if (child instanceof ViewGroup) {
+        if (hasWebView((ViewGroup) child)) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
   @Override
