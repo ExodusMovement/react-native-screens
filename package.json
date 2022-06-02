@@ -36,7 +36,6 @@
     "android/src/paper/",
     "android/build.gradle",
     "ios/",
-    "windows/",
     "RNScreens.podspec",
     "README.md",
     "!**/__tests__",
