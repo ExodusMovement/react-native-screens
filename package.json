@@ -46,7 +46,6 @@
     "android/CMakeLists.txt",
     "ios/",
     "cpp/",
-    "windows/",
     "RNScreens.podspec",
     "react-native.config.js",
     "README.md",
