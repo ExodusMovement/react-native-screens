@@ -1,6 +1,6 @@
 {
   "name": "@exodus/react-native-screens",
-  "version": "3.13.1-exodus.2",
+  "version": "3.13.1-exodus.3",
   "description": "Native navigation primitives for your React Native app.",
   "scripts": {
     "check-types": "tsc --noEmit",
