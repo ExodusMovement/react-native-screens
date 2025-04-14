@@ -1,6 +1,6 @@
 {
-  "main": "../lib/commonjs/reanimated/index",
-  "module": "../lib/module/reanimated/index",
-  "react-native": "../src/reanimated/index",
-  "types": "../lib/typescript/reanimated/index.d.ts"
+  "main": "../lib/lib/reanimated/index",
+  "module": "../lib/reanimated/index",
+  "react-native": "../lib/reanimated/index",
+  "types": "../lib/reanimated/index.d.ts"
 }

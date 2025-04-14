@@ -18,19 +18,14 @@
     "lint-android": "./android/gradlew -p android spotlessCheck -q",
     "lint": "yarn lint-js && yarn lint-android",
     "release": "yarn prepare && npm login && release-it",
-    "prepare": "bob build && husky install",
     "architectures-consistency-check": "node ./scripts/codegen-check-consistency.js",
     "sync-architectures": "node ./scripts/codegen-sync-archs.js"
   },
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "react-native": "src/index",
-  "source": "src/index",
-  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.tsx",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
   "files": [
-    "src/",
-    "common/",
-    "lib/",
+    "src",
     "native-stack/",
     "gesture-handler/",
     "reanimated/",
@@ -108,7 +103,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-native": "0.78.0-rc.5",
-    "react-native-builder-bob": "^0.23.2",
     "react-native-gesture-handler": "^2.22.0",
     "react-native-reanimated": "3.16.7",
     "react-native-safe-area-context": "5.1.0",
@@ -129,20 +123,6 @@
     "android/**/*.kt": "yarn format-android",
     "ios/**/*.{h,m,mm,cpp}": "yarn format-ios",
     "src/fabric/*.ts": "yarn sync-architectures"
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
   },
   "eslintIgnore": [
     "node_modules/",
