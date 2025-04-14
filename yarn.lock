@@ -1677,6 +1677,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@exodus/react-native-screens@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@exodus/react-native-screens@workspace:."
+  dependencies:
+    "@babel/core": "npm:^7.25.2"
+    "@babel/eslint-parser": "npm:7.22.15"
+    "@react-native-community/cli": "npm:20.0.0-alpha.2"
+    "@react-native-community/cli-platform-android": "npm:20.0.0-alpha.2"
+    "@react-native-community/cli-platform-ios": "npm:20.0.0-alpha.2"
+    "@react-native/babel-preset": "npm:0.81.1"
+    "@react-native/eslint-config": "npm:0.81.1"
+    "@react-native/metro-config": "npm:0.81.1"
+    "@react-native/typescript-config": "npm:0.81.1"
+    "@react-navigation/native": "npm:^5.8.0"
+    "@react-navigation/stack": "npm:^5.10.0"
+    "@types/jest": "npm:^29.5.13"
+    "@types/react": "npm:^19.1.0"
+    "@types/react-test-renderer": "npm:^19.1.0"
+    "@types/shelljs": "npm:^0"
+    "@typescript-eslint/eslint-plugin": "npm:^6.5.0"
+    "@typescript-eslint/parser": "npm:^6.5.0"
+    eslint: "npm:^8.56.0"
+    eslint-config-prettier: "npm:^8.10.0"
+    eslint-config-standard: "npm:^17.1.0"
+    eslint-plugin-ft-flow: "npm:^3.0.11"
+    eslint-plugin-import: "npm:^2.28.1"
+    eslint-plugin-jest: "npm:^27.9.0"
+    eslint-plugin-n: "npm:^16.0.2"
+    eslint-plugin-promise: "npm:^6.1.1"
+    husky: "npm:^8.0.3"
+    jest: "npm:^29.6.3"
+    lint-staged: "npm:^14.0.1"
+    prettier: "npm:^2.8.8"
+    react: "npm:^19.1.0"
+    react-dom: "npm:^19.1.0"
+    react-freeze: "npm:^1.0.0"
+    react-native: "npm:0.81.1"
+    react-native-gesture-handler: "npm:^2.28.0"
+    react-native-is-edge-to-edge: "npm:^1.2.1"
+    react-native-reanimated: "npm:^3.19.0"
+    react-native-safe-area-context: "npm:5.6.0"
+    react-native-windows: "npm:^0.64.8"
+    react-test-renderer: "npm:^19.1.0"
+    release-it: "npm:^15.6.0"
+    shelljs: "npm:^0.9.2"
+    typescript: "npm:^5.8.3"
+    warn-once: "npm:^0.1.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -12243,59 +12296,6 @@ __metadata:
   checksum: 10c0/17877475217e3b9fc75afcd28bfa287cc996e4eb8cfc698f825670596d3e93d38d28aabc32a038f5167932412c6ef632a749b1c5fe49e15bd863326643740108
   languageName: node
   linkType: hard
-
-"react-native-screens@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-native-screens@workspace:."
-  dependencies:
-    "@babel/core": "npm:^7.25.2"
-    "@babel/eslint-parser": "npm:7.22.15"
-    "@react-native-community/cli": "npm:20.0.0-alpha.2"
-    "@react-native-community/cli-platform-android": "npm:20.0.0-alpha.2"
-    "@react-native-community/cli-platform-ios": "npm:20.0.0-alpha.2"
-    "@react-native/babel-preset": "npm:0.81.1"
-    "@react-native/eslint-config": "npm:0.81.1"
-    "@react-native/metro-config": "npm:0.81.1"
-    "@react-native/typescript-config": "npm:0.81.1"
-    "@react-navigation/native": "npm:^5.8.0"
-    "@react-navigation/stack": "npm:^5.10.0"
-    "@types/jest": "npm:^29.5.13"
-    "@types/react": "npm:^19.1.0"
-    "@types/react-test-renderer": "npm:^19.1.0"
-    "@types/shelljs": "npm:^0"
-    "@typescript-eslint/eslint-plugin": "npm:^6.5.0"
-    "@typescript-eslint/parser": "npm:^6.5.0"
-    eslint: "npm:^8.56.0"
-    eslint-config-prettier: "npm:^8.10.0"
-    eslint-config-standard: "npm:^17.1.0"
-    eslint-plugin-ft-flow: "npm:^3.0.11"
-    eslint-plugin-import: "npm:^2.28.1"
-    eslint-plugin-jest: "npm:^27.9.0"
-    eslint-plugin-n: "npm:^16.0.2"
-    eslint-plugin-promise: "npm:^6.1.1"
-    husky: "npm:^8.0.3"
-    jest: "npm:^29.6.3"
-    lint-staged: "npm:^14.0.1"
-    prettier: "npm:^2.8.8"
-    react: "npm:^19.1.0"
-    react-dom: "npm:^19.1.0"
-    react-freeze: "npm:^1.0.0"
-    react-native: "npm:0.81.1"
-    react-native-gesture-handler: "npm:^2.28.0"
-    react-native-is-edge-to-edge: "npm:^1.2.1"
-    react-native-reanimated: "npm:^3.19.0"
-    react-native-safe-area-context: "npm:5.6.0"
-    react-native-windows: "npm:^0.64.8"
-    react-test-renderer: "npm:^19.1.0"
-    release-it: "npm:^15.6.0"
-    shelljs: "npm:^0.9.2"
-    typescript: "npm:^5.8.3"
-    warn-once: "npm:^0.1.0"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  languageName: unknown
-  linkType: soft
 
 "react-native-windows@npm:^0.64.8":
   version: 0.64.31
