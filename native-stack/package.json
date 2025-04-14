@@ -1,6 +1,5 @@
 {
-  "main": "../lib/native-stack/index",
-  "module": "../lib/native-stack/index",
-  "react-native": "../lib/native-stack/index",
-  "types": "../lib/native-stack/index.d.ts"
+  "main": "../src/native-stack/index.tsx",
+  "module": "../src/native-stack/index.tsx",
+  "react-native": "../src/native-stack/index.tsx"
 }
