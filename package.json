@@ -1,6 +1,6 @@
 {
   "name": "@exodus/react-native-screens",
-  "version": "4.9.0-rc.1",
+  "version": "4.9.0-rc.3",
   "description": "Native navigation primitives for your React Native app.",
   "scripts": {
     "submodules": "git submodule update --init --recursive && (cd react-navigation && yarn && yarn build && cd ../)",
