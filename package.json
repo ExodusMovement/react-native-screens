@@ -26,6 +26,7 @@
   "module": "src/index.tsx",
   "files": [
     "src",
+    "common/",
     "native-stack/",
     "gesture-handler/",
     "reanimated/",
