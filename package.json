@@ -21,19 +21,16 @@
     "lint-swift": "sh scripts/swift-format-helper.sh lint",
     "lint": "yarn lint-js && yarn lint-android && yarn lint-swift",
     "release": "yarn prepare && npm login && release-it",
-    "prepare": "bob build && husky install",
     "architectures-consistency-check": "node ./scripts/codegen-check-consistency.js",
     "sync-architectures": "node ./scripts/codegen-sync-archs.js"
   },
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "react-native": "src/index",
-  "source": "src/index",
-  "types": "lib/typescript/index.d.ts",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
+  "react-native": "src/index.tsx",
+  "types": "src/index.tsx",
   "files": [
-    "src/",
+    "src",
     "common/",
-    "lib/",
     "native-stack/",
     "gesture-handler/",
     "reanimated/",
@@ -113,7 +110,6 @@
     "react": "19.2.3",
     "react-dom": "^19.1.0",
     "react-native": "0.84.0",
-    "react-native-builder-bob": "^0.23.2",
     "react-native-gesture-handler": "^2.28.0",
     "react-native-reanimated": "^3.19.0",
     "react-native-safe-area-context": "5.6.0",
@@ -133,20 +129,6 @@
     "android/**/*.kt": "yarn format-android",
     "ios/**/*.{h,m,mm,cpp}": "yarn format-ios-cpp",
     "src/fabric/*.ts": "yarn sync-architectures"
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
   },
   "eslintIgnore": [
     "node_modules/",

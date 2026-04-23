@@ -1,6 +1,5 @@
 {
-  "main": "../lib/commonjs/private/index",
-  "module": "../lib/module/private/index",
-  "react-native": "../src/private/index",
-  "types": "../lib/typescript/private/index"
+  "main": "../src/private/index.ts",
+  "module": "../src/private/index.ts",
+  "react-native": "../src/private/index.ts"
 }
