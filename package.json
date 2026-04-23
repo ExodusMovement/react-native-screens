@@ -51,12 +51,12 @@
     "android/CMakeLists.txt",
     "ios/",
     "cpp/",
-    "windows/",
     "RNScreens.podspec",
     "react-native.config.js",
     "README.md",
     "!**/__tests__",
-    "!android/src/main/java/com/swmansion/rnscreens/LifecycleHelper.kt"
+    "!android/src/main/java/com/swmansion/rnscreens/LifecycleHelper.kt",
+    "!**/*.map"
   ],
   "repository": {
     "type": "git",
